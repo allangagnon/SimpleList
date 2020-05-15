@@ -64,6 +64,9 @@ void List::delete_item()
         {
             cout << i <<  ": " << list[i] << "\n";
         }
+        int choiceNum;
+        cin >> choiceNum;
+        list.erase(list.begin()+choiceNum);
     }
     else
     {
