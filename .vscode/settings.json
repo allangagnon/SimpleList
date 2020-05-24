@@ -1,0 +1,27 @@
+{
+    "files.associations": {
+        "*.tcc": "cpp",
+        "numeric": "cpp",
+        "fstream": "cpp",
+        "iostream": "cpp",
+        "istream": "cpp",
+        "ostream": "cpp",
+        "system_error": "cpp",
+        "typeinfo": "cpp",
+        "*.txx": "cpp",
+        "algorithm": "cpp",
+        "deque": "cpp",
+        "exception": "cpp",
+        "functional": "cpp",
+        "iterator": "cpp",
+        "map": "cpp",
+        "memory": "cpp",
+        "new": "cpp",
+        "queue": "cpp",
+        "set": "cpp",
+        "stdexcept": "cpp",
+        "string": "cpp",
+        "utility": "cpp",
+        "vector": "cpp"
+    }
+}
