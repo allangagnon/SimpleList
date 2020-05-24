@@ -8,15 +8,20 @@ void List::print_menu()
     cout << " 1 - Print list. \n";
     cout << " 2 - Add to list. \n";
     cout << " 3 - Delete from list. \n";
-    cout << " 4 - Quit. \n";
+    cout << " 4 - Save list. \n"; 
+    cout << " 5 - Quit. \n";
     cout << "**********************\n";
     cout << " Enter your choice and press return: ";
 
     cin >> choice;
 
-    if (choice == 4)
+    if (choice == 5)
     {
         return;
+    }
+    else if (choice == 4)
+    {
+        save_list();
     }
     else if (choice == 2)
     {
@@ -100,7 +105,7 @@ void List::print_list()
     }
 }
 
-void List::find_userList()
+bool List::find_userList()
 {
     bool userFound = false;
 
@@ -114,10 +119,24 @@ void List::find_userList()
         {
             cout << "User has been found: " << mainList[user_index][0] << "\n";
             list = mainList[user_index];
+            currentUserIndex = user_index;
             userFound = true;
             break;
         }
         
     }
-    
+    if (userFound == false)
+    {
+        list.push_back(name);
+        mainList.push_back(list);
+        currentUserIndex = (int)mainList.size() -1;
+    }
+    return userFound;
+}
+
+void List::save_list()
+{
+    cout << "Saving the list...\n";
+    mainList[currentUserIndex] = list;
+    print_menu();
 }
